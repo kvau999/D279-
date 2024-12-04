@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradigm Pet Professionals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="navbar"></header>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('navbar.html')
+                .then(response => {
+                    if (!response.ok) {
+                        console.error(`Error fetching navbar.html: ${response.status}`);
+                        return '';
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        });
+    </script>
+    
+    <main>
+        <section class="intro">
+            <div class="image-placeholder">
+                <img src="mainimage.jpg" alt="Loading">
+            </div>
+            <div class="text-box">
+                <h2>Paradigm Pet Professionals</h2>
+                <p>Pets are nature's gift to humanity. It has been scientifically proven that opening our homes and hearts to a pet increases our longevity and improves our overall quality of life as well as the lives of our pets.</p>
+                <p>At Pet Paradigm Professionals, our mission is to offer resources to help you care for your furry, scaly, feathery, and slimy loved ones. Our pet experts—or “Pexperts”—have been working with pet owners and professionals alike for the past twelve years. They offer one-on-one consultations with current and prospective pet owners as well as group presentations designed for veterinary, pet shelter, and pet breeding professionals.</p>
+                <p>Looking for basic pet care advice for the most common type of pets? Need additional help determining which type of pet is right for you and your family? We will work with you and provide tailored evidence-based pet care to ensure lifelong health and wellness of your new companion.</p>
+            </div>
+        </section>
+        <section class="bottom-section">
+            <div class="consultation">
+                <h3>Registration for Consultation</h3>
+                <form>
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required>
+
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="timeZone">Time Zone</label>
+                    <input type="text" id="timeZone" name="timeZone">
+
+                    <label for="petName">Pet's Name</label>
+                    <input type="text" id="petName" name="petName">
+
+                    <label for="petAge">Pet's Age</label>
+                    <input type="number" id="petAge" name="petAge">
+
+                    <label for="type">Type</label>
+                    <input type="text" id="type" name="type">
+
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+            <div class="resources">
+                <h3>Looking for Your New Best Friend?</h3>
+                <p>The following organizations can help you find and adopt the perfect companion:</p>
+                <ul>
+                    <li><a href="https://theshelterpetproject.org">General Adoption Resources</a></li>
+                    <li><a href="https://www.aspca.org">ASPCA</a></li>
+                    <li><a href="https://www.sterlingshelter.org/humane-society/koi-fish-rescue/">Fish Rescue</a></li>
+                    <li><a href="https://savethesnakes.org/snakerescuecall/">Snake Rescue</a></li>
+                    <li><a href="https://ftlob.rescuegroups.org/">Bird Rescue</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dogs.html">Dogs</a></li>
+                <li><a href="cats.html">Cats</a></li>
+                <li><a href="birds.html">Birds</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

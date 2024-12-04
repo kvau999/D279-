@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birds</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header placeholder -->
+    <header id="navbar"></header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('navbar.html')
+                .then(response => {
+                    if (!response.ok) {
+                        console.error(`Error fetching navbar.html: ${response.status}`);
+                        return '';
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        });
+    </script>
+
+    <main>
+        <section class="spaced-intro">
+            <h1>Birds</h1>
+            <p>
+                Birds are very intriguing creatures as they can range from as small as a Cuban bee hummingbird (about two inches long and a little over 1/20 of an ounce) to as large as an ostrich. While most birds fly, there are some that don't. Birds are amazing and each breed is unique in its own way, particularly when it comes to their relational needs and well-being.
+            </p>
+        </section>
+        <section class="content">
+            <h2>Depression in Birds</h2>
+            <p>
+                Unfortunately, birds can experience sadness and depression just like humans. A number of root causes may be responsible for your bird's depression, such as an illness (either physical or mental), losing its companion, or increasingly becoming bored.
+            </p>
+            <p>
+                Some signs to help identify if your bird is experiencing depression may include:
+            </p>
+            <ul>
+                <li>Reduced appetite</li>
+                <li>Becoming increasingly irritable</li>
+                <li>Aggressive behavior</li>
+                <li>Songs having a different, more solemn tone</li>
+            </ul>
+            <p>
+                Be sure to tell your veterinarian if you see signs of any of these symptoms. Just like many illnesses, identifying and treating the symptoms earlier may drastically increase the lifespan of your bird.
+            </p>
+        </section>
+        <section class="content">
+            <h2>Bird Care</h2>
+            <p>
+                Birds require specific care depending on their species. Ensuring proper nutrition, a stimulating environment, and regular veterinary checkups are key to their health and happiness. Make sure your bird has plenty of toys and time outside of their cage to interact with you and their surroundings.
+            </p>
+        </section>
+        <section class="content">
+            <h2>Bird Companions</h2>
+            <p>
+                Many birds thrive with a companion of their own species. Birds are highly social creatures, and their well-being can improve dramatically with the right social environment.
+            </p>
+            <div class="image-section">
+                <img src="bird1.jpg" alt="Colorful bird sitting on a branch">
+            </div>
+            <style>
+                .image-section {
+                    justify-content: center;
+                }
+            </style>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dogs.html">Dogs</a></li>
+                <li><a href="cats.html">Cats</a></li>
+                <li><a href="birds.html">Birds</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

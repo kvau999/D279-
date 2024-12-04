@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <header id="navbar"></header>
+  <link rel="stylesheet" href="style.css">
+<script>
+    document.getElementById('navbar').innerHTML = fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('navbar').innerHTML = data)
+        .catch(error => console.error('Error loading navbar:', error));
+</script>
+<main>
+    <section class="spaced-intro">
+      <h1>Frequently Asked Questions</h1>
+      <p>
+          Our “Pexperts” typically encounter the following questions when consulting with prospective “pet parents”:
+      </p>
+  </section>
+  <section class="content">
+      <h2>Questions and Answers</h2>
+      <p>
+          <strong>Question:</strong> How long can I expect my dog to live based on their breed and size, and what can I do to help them live a healthier life?<br>
+          <strong>Answer:</strong> The lifespan of a dog can vary greatly depending on their breed and size. For example, smaller breeds like Chihuahuas can live up to 15-20 years, whereas larger breeds like Great Danes typically live 7-10 years. To help your dog live a healthier life, provide them with a balanced diet, regular exercise, routine veterinary checkups, and plenty of love and mental stimulation.
+      </p>
+      <p>
+          <strong>Question:</strong> What’s the best way to treat fleas in my dog’s fur, and how can I prevent them from coming back?<br>
+          <strong>Answer:</strong> To treat fleas, use a veterinarian-approved flea shampoo or topical treatment and follow the instructions carefully. Prevent fleas from returning by keeping your pet’s bedding clean, using flea preventatives regularly, and maintaining a clean home environment. Consult your vet for the best options for your dog’s breed and size.
+      </p>
+      <p>
+          <strong>Question:</strong> How often should I groom my cat to prevent hairballs, and are there any specific tools or products you recommend?<br>
+          <strong>Answer:</strong> Groom your cat at least once a week, or more frequently for long-haired breeds, to reduce shedding and prevent hairballs. Use a slicker brush or grooming gloves to remove loose fur gently. Specialized hairball control cat foods and treats can also help minimize hairball formation.
+      </p>
+      <p>
+          <strong>Question:</strong> What are the signs that my senior cat might be experiencing age-related health issues, and when should I consult a vet?<br>
+          <strong>Answer:</strong> Signs of age-related health issues in senior cats include weight loss, decreased appetite, increased thirst, changes in litter box habits, and reduced activity levels. If you notice any of these symptoms, consult a veterinarian promptly to address potential health concerns.
+      </p>
+  </section>
+</main>
+<footer>
+  <nav>
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dogs.html">Dogs</a></li>
+          <li><a href="cats.html">Cats</a></li>
+          <li><a href="birds.html">Birds</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+      </ul>
+  </nav>
+</footer>
+</body>
+</html>
